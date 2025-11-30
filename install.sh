@@ -16,7 +16,7 @@ fi
 
 if [[ "$OS_TYPE" == "Darwin" ]]; then
     # macOS detected. Note: You may need to run 'xattr -d com.apple.quarantine /usr/local/bin/${EXE_NAME%.exe}' after installation.
-    DOWNLOAD_URL="https://storage.googleapis.com/executable-arkios/Arkios-Code-Mac/cli-app-macos"
+    DOWNLOAD_URL="https://storage.googleapis.com/executable-arkios/Arkios-Code-Mac/arkios-code-macos"
 elif [[ "$OS_TYPE" == "Linux" ]]; then
     # Add your Linux download URL here
     DOWNLOAD_URL="https://storage.googleapis.com/executable-arkios/Arkios-Code-Linux/arkios-code-linux"
