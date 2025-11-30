@@ -22,7 +22,6 @@ if ($OS_TYPE -eq "Windows") {
 }
 
 # Set download URL - Windows binary
-# TODO: Update this URL when Windows binary is available
 $DOWNLOAD_URL = "https://storage.googleapis.com/executable-arkios/Arkios-Code-Windows/arkios-code-windows.exe"
 
 $INSTALL_PATH = Join-Path $INSTALL_DIR $EXE_NAME
@@ -63,7 +62,7 @@ $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
 
 # Check if already in PATH
 if ($currentPath -like "*$INSTALL_DIR*") {
-    Write-Host "  ✓ PATH already configured"
+    Write-Host "  PATH already configured"
     Write-Host ""
     Write-Host "Run 'arkios-code' to get started!"
 } else {
@@ -72,7 +71,7 @@ if ($currentPath -like "*$INSTALL_DIR*") {
 
     try {
         [Environment]::SetEnvironmentVariable("Path", $newPath, "User")
-        Write-Host "  ✓ Added to user PATH"
+        Write-Host "Added to user PATH"
         Write-Host ""
         Write-Host "PATH configured successfully!"
         Write-Host ""
@@ -88,3 +87,4 @@ if ($currentPath -like "*$INSTALL_DIR*") {
         Write-Host "  2. Add to User PATH: $INSTALL_DIR"
     }
 }
+
